@@ -9,7 +9,7 @@ def index(request):
 # def room(request, room_name):
 #     return render(request, "chat/room.html", {"room_name": room_name})
 
-def room(request, room_name):
+def room(request):
     user_name = request.GET.get('username', 'Anonymous')
-    return render(request, "chat/room.html", {"room_name": room_name, "user_name": user_name})
+    return render(request, "chat/room.html", {"user_name": user_name})
 
